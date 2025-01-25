@@ -1,0 +1,13 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self' blob:; script-src 'self' 'unsafe-inline' https://cdn.shopify.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://cdn.shopify.com https://images.unsplash.com; media-src 'self' blob: https://customer-6njalxhlz5ulnoaq.cloudflarestream.com; connect-src 'self' https://kctmenswear.myshopify.com https://cdn.shopify.com https://www.google-analytics.com https://stats.g.doubleclick.net https://customer-6njalxhlz5ulnoaq.cloudflarestream.com; frame-ancestors 'none'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests;
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  
+/api/*
+  Cache-Control: no-cache

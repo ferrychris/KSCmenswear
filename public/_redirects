@@ -1,0 +1,13 @@
+# Redirect default Netlify subdomain to primary domain
+https://kct-menswear.netlify.app/* https://kctmenswear.com/:splat 301!
+
+# Handle client-side routing
+/* /index.html 200
+
+# Redirect www to non-www
+https://www.kctmenswear.com/* https://kctmenswear.com/:splat 301!
+
+# Redirect old URLs
+/shop/* /collections/:splat 301
+/about-us /about 301
+/contact-us /contact 301

@@ -1,0 +1,45 @@
+/* Mobile navigation animations */
+.nav-item-enter {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.nav-item-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 300ms ease-out;
+}
+
+.nav-item-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.nav-item-exit-active {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 300ms ease-in;
+}
+
+/* Mobile navigation styles */
+.mobile-nav-item {
+  @apply relative flex flex-col items-center justify-center w-full h-full;
+}
+
+.mobile-nav-item::after {
+  content: '';
+  @apply absolute bottom-0 left-1/2 w-1 h-1 rounded-full bg-indigo-600 transform -translate-x-1/2 scale-0 transition-transform;
+}
+
+.mobile-nav-item.active::after {
+  @apply scale-100;
+}
+
+/* Touch feedback */
+.active-state {
+  transition: transform 100ms ease-out;
+}
+
+.active-state:active {
+  transform: scale(0.98);
+}

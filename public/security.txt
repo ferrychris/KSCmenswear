@@ -1,0 +1,7 @@
+Contact: mailto:security@kctmenswear.com
+Expires: 2025-12-31T23:59:59.000Z
+Encryption: https://kctmenswear.com/pgp-key.txt
+Acknowledgments: https://kctmenswear.com/security/hall-of-fame
+Preferred-Languages: en
+Canonical: https://kctmenswear.com/.well-known/security.txt
+Policy: https://kctmenswear.com/security/policy
