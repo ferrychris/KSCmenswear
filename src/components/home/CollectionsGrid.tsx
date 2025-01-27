@@ -12,8 +12,8 @@ const collections = [
     seo: {
       alt: 'Premium formal wear collection featuring suits and tuxedos',
       caption: 'Elegant formal wear for any occasion',
-      keywords: ['formal wear', 'suits', 'tuxedos', 'menswear', 'formal attire']
-    }
+      keywords: ['formal wear', 'suits', 'tuxedos', 'menswear', 'formal attire'],
+    },
   },
   {
     title: 'Casual Collection',
@@ -24,8 +24,8 @@ const collections = [
     seo: {
       alt: 'Casual menswear collection featuring everyday styles',
       caption: 'Contemporary casual wear for the modern man',
-      keywords: ['casual wear', 'everyday style', 'menswear', 'casual attire']
-    }
+      keywords: ['casual wear', 'everyday style', 'menswear', 'casual attire'],
+    },
   },
   {
     title: 'Accessories',
@@ -36,8 +36,8 @@ const collections = [
     seo: {
       alt: 'Premium menswear accessories collection',
       caption: 'Curated accessories to perfect your style',
-      keywords: ['accessories', 'ties', 'bowties', 'pocket squares', 'menswear accessories']
-    }
+      keywords: ['accessories', 'ties', 'bowties', 'pocket squares', 'menswear accessories'],
+    },
   },
   {
     title: 'Winter Collection',
@@ -48,9 +48,9 @@ const collections = [
     seo: {
       alt: 'Winter menswear collection featuring warm and stylish pieces',
       caption: 'Sophisticated winter wear for the cold season',
-      keywords: ['winter collection', 'winter wear', 'winter suits', 'winter menswear']
-    }
-  }
+      keywords: ['winter collection', 'winter wear', 'winter suits', 'winter menswear'],
+    },
+  },
 ];
 
 export function CollectionsGrid() {
@@ -59,7 +59,7 @@ export function CollectionsGrid() {
       <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-12">
         Latest Collections
       </h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {collections.map((collection) => (
           <Link
@@ -72,9 +72,13 @@ export function CollectionsGrid() {
               alt={collection.seo.alt}
               title={collection.seo.caption}
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy" // Add lazy loading for better performance
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-75 transition-opacity duration-300" style={{ background: `linear-gradient(to right, ${collection.accent})` }} />
+            <div
+              className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-75 transition-opacity duration-300"
+              style={{ background: `linear-gradient(to right, ${collection.accent})` }}
+            />
             <div className="absolute inset-0 flex flex-col justify-end p-8">
               <h3 className="text-2xl font-bold text-white mb-2">{collection.title}</h3>
               <p className="text-lg text-gray-200 mb-4">{collection.description}</p>
